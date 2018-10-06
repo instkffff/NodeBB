@@ -108,7 +108,7 @@ Topics.getTopicsByTids = function (tids, uid, callback) {
 
 			async.parallel({
 				users: function (next) {
-					user.getUsersFields(uids, ['uid', 'username', 'fullname', 'userslug', 'reputation', 'postcount', 'picture', 'signature', 'banned', 'status'], next);
+					user.getUsersFields(uids, ['uid', 'username', 'fullname', 'userslug', 'reputation', 'postcount', 'picture', 'signature', 'banned', 'status','alliancepicture','corppicture'], next);
 				},
 				userSettings: function (next) {
 					user.getMultipleUserSettings(uids, next);

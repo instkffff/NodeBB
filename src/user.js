@@ -107,7 +107,7 @@ User.getUsers = function (uids, uid, callback) {
 	User.getUsersWithFields(uids, [
 		'uid', 'username', 'userslug', 'picture', 'status',
 		'postcount', 'reputation', 'email:confirmed', 'lastonline',
-		'flags', 'banned', 'banned:expire', 'joindate',
+		'flags', 'banned', 'banned:expire', 'joindate','alliancepicture','corppicture',
 	], uid, callback);
 };
 

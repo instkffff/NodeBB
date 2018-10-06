@@ -24,7 +24,7 @@ module.exports = function (Posts) {
 						user.getUsersFields(uids, [
 							'uid', 'username', 'fullname', 'userslug',
 							'reputation', 'postcount', 'picture', 'signature',
-							'banned', 'status', 'lastonline', 'groupTitle',
+							'banned', 'status', 'lastonline', 'groupTitle','alliancepicture','corppicture',
 						], next);
 					},
 					userSettings: function (next) {
@@ -71,6 +71,8 @@ module.exports = function (Posts) {
 					userData.signature = validator.escape(String(userData.signature || ''));
 					userData.fullname = userSettings[index].showfullname ? validator.escape(String(userData.fullname || '')) : undefined;
 					userData.selectedGroups = [];
+					userData.alliancepicture = userData.alliancepicture;
+					userData.corppicture = userData.corppicture;
 
 					if (parseInt(meta.config.hideFullname, 10) === 1) {
 						userData.fullname = undefined;
