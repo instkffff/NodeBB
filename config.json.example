@@ -1,0 +1,17 @@
+{
+    "url": "http://forums.nightcandle.tk",
+    "secret": "250584f3-8f73-4285-97f6-b59f4fae546a",
+    "database": "mongo",
+    "mongo": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "username": "",
+        "password": "",
+        "database": "nodebb",
+        "uri": ""
+    },
+    "port": "4500",
+    "socket.io":{
+	"origins":"*:*"
+    }
+}
