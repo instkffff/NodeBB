@@ -11,23 +11,23 @@
 
 4.下载nodebb主体从我的分支
 	
-    * git clone https://github.com/instkffff/NodeBB.git
-    * ./nodebb setup (会有安装向导)
-    * 参考config.json.example  修改config.json (主要是socket.io设置，否则会报错，url设置与eveonline auth的callback地址一致)
-    * ./nodebb build
-    * ./nodebb start
+* git clone https://github.com/instkffff/NodeBB.git
+* ./nodebb setup (会有安装向导)
+* 参考config.json.example  修改config.json (主要是socket.io设置，否则会报错，url设置与eveonline auth的callback地址一致)
+* ./nodebb build
+* ./nodebb start
   
 5.根据我的插件列表截图，安装插件(未启用的可以卸载或不安装)
 
 6.有2个插件需要使用我的分支版本(重要)
 	
-    * https://github.com/instkffff/nodebb-theme-persona
-    * https://github.com/instkffff/nodebb-plugin-sso-eveonline
+* https://github.com/instkffff/nodebb-theme-persona
+* https://github.com/instkffff/nodebb-plugin-sso-eveonline
     
 7.调试好以上包括ssl加密之后(hsts也可以配置一下，更好的chrome支持)，使用eve账号授权，然后使用默认设置时候的账号将其设置为管理员，并禁用其它注册登录方式。(论坛先切到中文模式)
 	
-    * ACP --> 设置 --> 用户 --> 验证：允许本地登录：禁用
-    * ACP --> 设置 --> 用户 --> 用户注册：注册方式：禁用注册
+* ACP --> 设置 --> 用户 --> 验证：允许本地登录：禁用
+* ACP --> 设置 --> 用户 --> 用户注册：注册方式：禁用注册
 
 8.设置论坛版块及member权限，由于eve-sso插件略复杂，我并没有制作alliance mapping功能，于是需要逐个公司填入mapping来获取member权限，非指定公司则获取register-user权限(不算老外70左右公司吧)。
 
